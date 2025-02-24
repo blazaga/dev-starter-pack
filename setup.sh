@@ -67,6 +67,7 @@ cp  ./tmux/tmux.conf $HOME/.config/tmux/tmux.conf
 
 
 echo "Installing Neovim Config"
+mv $HOME/.config/nvim $HOME/.config/nvim.backup  || echo 0;
 git clone https://gitlab.platform.dnadev.net/bon/nvim-config.git $HOME/.config/nvim
 
 
