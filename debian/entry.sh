@@ -1,13 +1,13 @@
 #!/bin/sh
-source ./versions;
-source ./sources/*.sh;
+source $PWD/versions;
+source $PWD/debian/sources/*.sh;
 
 
 installation ()
 {
   install_prerequisites;
   install_docker;
-  install_rust;
+  install_rust;:wq
   install_nodejs;
   install_tools;
   install_tmux;
