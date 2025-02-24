@@ -58,7 +58,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/loket/oh-my-zsh/feature/ba
   exit 1
 }
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k";
-sed -i -e  's/"robbyrussell"/"powerlevel10k\/powerlevel10k"/g' .zshrc
+sed -i -e  's/"robbyrussell"/"powerlevel10k\/powerlevel10k"/g' $HOME/.zshrc
 
 echo "Installing TMUX Plugins Manager"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
