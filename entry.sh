@@ -3,5 +3,17 @@
 source ./detect-os.sh;
 
 
-OS=$(detect_os|awk '{print tolower($0)}');
-echo $OS
+
+init(){
+  local OS=detect_os;
+  case "$OS" in
+    *debian*) echo 1
+      source ./debian/entry.sh;
+      entry;
+      ;;
+    *) echo "Cannot Install - Unsupported OS"
+    ;;
+  esac
+}
+
+init
