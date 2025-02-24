@@ -8,7 +8,7 @@ installation ()
 {
   install_prerequisites;
   install_docker;
-  install_rust;:wq
+  install_rust;
   install_nodejs;
   install_tools;
   install_tmux;
