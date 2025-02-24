@@ -1,5 +1,5 @@
 #!/bin/sh
-source $PWD/versions;
+source $PWD/debian/entry/versions;
 source $PWD/debian/sources/*.sh;
 
 
