@@ -5,9 +5,9 @@ source ./detect-os.sh;
 
 
 init(){
-  local OS=detect_os;
+  local OS=$(detect_os|awk '{print tolower($0)}');
   case "$OS" in
-    *debian*) echo 1
+    *debian*|*ubuntu*) echo 1
       source ./debian/entry.sh;
       entry;
       ;;
