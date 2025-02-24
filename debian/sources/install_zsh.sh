@@ -1,9 +1,13 @@
 #!/bin/bash
 
+source $PWD/debian/entry/versions;
 install_zsh_config() {
   echo "Installing ZSH Configuration";
 
   sed -i -e  's/"robbyrussell"/"powerlevel10k\/powerlevel10k"/g' $HOME/.zshrc
+    
+  cat $PWD/config/zshrc.partial >> $HOME/.zshrc
+  
   echo "Installing ZSH Configuration - Done";
 }
 

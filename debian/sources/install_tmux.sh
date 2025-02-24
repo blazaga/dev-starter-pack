@@ -1,5 +1,6 @@
 #!bin/bash
 
+source $PWD/debian/entry/versions;
 LOCALE="en_US.UTF-8";
 
 install_locales() {
@@ -16,7 +17,7 @@ install_tmux_tpm() {
   
   git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
   mkdir -p $HOME/.config/tmux
-  cp  ${pwd}/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
+  cp  $PWD/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
   
   echo "Installing TMUX Plugins Manager - Done"
    

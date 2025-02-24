@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source $PWD/debian/entry/versions;
 install_docker()
 {
   echo "Installing Docker - Standalone";
