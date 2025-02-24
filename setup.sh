@@ -26,7 +26,7 @@ docker network create backend;
 docker network create database;
 
 echo "Installing Essential Shell Utilities";
-sudo apt install git zoxide neovim tmux zsh -y;
+sudo apt install git zoxide tmux zsh -y;
 
 # Install Node Utilities
 npm install -g pnpm pm2 @nestjs/cli create-t3-app;
@@ -67,6 +67,9 @@ cp  ./tmux/tmux.conf $HOME/.config/tmux/tmux.conf
 
 
 echo "Installing Neovim Config"
+wget https://github.com/neovim/neovim-releases/releases/download/v0.10.4/nvim-linux-x86_64.deb;
+sudo apt install ./nvim-linux-x86_64.deb -y;
+rm nvim-linux-x86_64.deb;
 mv $HOME/.config/nvim $HOME/.config/nvim.backup  || echo 0;
 git clone https://gitlab.platform.dnadev.net/bon/nvim-config.git $HOME/.config/nvim
 
