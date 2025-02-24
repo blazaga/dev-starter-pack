@@ -65,6 +65,12 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 mkdir -p $HOME/.config/tmux
 cp  ./tmux/tmux.conf $HOME/.config/tmux/tmux.conf
 
+
+echo "Installing Neovim Config"
+git clone https://gitlab.platform.dnadev.net/bon/nvim-config.git $HOME/.config/nvim
+
+
+
 echo "Configuring Shell"
 sudo usermod -s $(which zsh) $USER;
 
