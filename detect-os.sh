@@ -1,41 +1,27 @@
 #!/bin/bash
 
 function detect_distro() {
-  source /etc/releases;
-  local distro=ID;
+  source /etc/lsb-release;
+  local distro=$DISTRIB_ID;
 
-  echo "Detected Distro $distro"
-  case "$distro" in 
+  case "$distro" in
     *ubuntu*|*debian*)
       distro="debian";
       ;;
   esac
-  
-  echo $distro;
 
+  echo $distro;
 }
 
 function detect_os() {
   local os=$OSTYPE;
 
   case "$os" in
-    *darwin*)
-        echo "MacOS Detected";
-      ;;
     *linux*)
-      detect_distro;
-      os=$
-      ;;
-    *) 
-        echo "Cannot Determine OS";
+      os="$(detect_distro)"
       ;;
   esac
 
   echo $os;
 }
 
-
-detect_os
-OS=$
-
-echo $OS
