@@ -63,12 +63,25 @@ install_exa ()
   echo "Installing Exa - Done"
 }
 
-entry(){
+install_neovim ()
+{
+  echo "Installing Neovim" 
+  wget https://github.com/neovim/neovim-releases/releases/download/v${NEOVIM_VERSION}/nvim-linux-x86_64.deb;
+  sudo apt install ./nvim-linux-x86_64.deb -y;
+  rm nvim-linux-x86_64.deb;
+  mv $HOME/.config/nvim $HOME/.config/nvim.backup  || echo 0;
+  git clone https://gitlab.platform.dnadev.net/bon/nvim-config.git $HOME/.config/nvim
+  echo "Installing Neovim - Done" 
+}
+
+# Entrypoint
+install_tools() {
   install_fzf;
   install_exa;
   install_bat;
   install_xh;:
   install_zoxide;
+  install_neovim;
 }
 
 
