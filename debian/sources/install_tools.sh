@@ -1,6 +1,6 @@
 #/bin/bash
 
-source $PWD/debian/entry/versions;
+source $PWD/debian/versions;
 BASE_DIR=/opt
 PLATFORM="amd64"
 

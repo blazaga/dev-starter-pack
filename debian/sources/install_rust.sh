@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $PWD/debian/entry/versions;
+source $PWD/debian/versions;
 install_rust () {
   echo "Installing Rust";
 

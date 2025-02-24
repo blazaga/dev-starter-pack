@@ -1,6 +1,6 @@
 #!bin/bash
 
-source $PWD/debian/entry/versions;
+source $PWD/debian/versions;
 LOCALE="en_US.UTF-8";
 
 install_locales() {

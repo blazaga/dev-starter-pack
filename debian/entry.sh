@@ -1,5 +1,5 @@
 #!/bin/sh
-source $PWD/debian/entry/versions;
+source $PWD/debian/versions;
 # source $PWD/debian/sources/*.sh;
 
 for f in $PWD/debian/sources/*.sh; do source $f; done;
