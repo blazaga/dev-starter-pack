@@ -22,6 +22,10 @@ function detect_os() {
     *darwin*)
         echo "MacOS Detected";
       ;;
+    *linux*)
+      detect_distro;
+      os=$
+      ;;
     *) 
         echo "Cannot Determine OS";
       ;;
