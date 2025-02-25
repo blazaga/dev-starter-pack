@@ -4,7 +4,7 @@ zstyle ':omz:update' frequency 13
 
 plugins=(git docker nodenv 1password debian aliases fzf npm sudo thefuck tmux zoxide rust)
 
-source "/root/.cargo/env"
+source "$HOME/.cargo/env"
 export FZF_DEFAULT_OPTS="--bind ctrl-h:preview-up,ctrl-l:preview-down --bind ctrl-/:toggle-preview"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
